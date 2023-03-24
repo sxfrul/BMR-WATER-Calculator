@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Water Calculator</title>
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <nav id="navigation">
+        <div class="left-nav">
+            <div class="title">
+                <label for="navigation"><h1>MY PERSONALIZED APP</h1></label>
+            </div>
+        </div>
+
+        <div class="right-nav">
+            <span class="nav-link" id="minimizeBtn">&minus;</span>
+            <span class="nav-link" id="closeBtn">&#10006;</span>
+
+        </div>
+    </nav>
+<!--Tabs-->
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'BMR/WATER-Calculator')" id="defaultOpen">bmr</button>
+        <button class="tablinks" onclick="openCity(event, 'workout')">workout</button>
+        <button class="tablinks" onclick="openCity(event, 'notes')">notes</button>
+    </div>
+
+    <div id="BMR/WATER-Calculator" class="tabcontent">
+        <div class="Calculator">
+            <!--TAKING INPUTS-->
+            <p>Weight (kg): <input id="user-mass"></p>
+            <p>Height (cm): <input id="user-height"></p>
+            <p>Age: <input id="user-age"></p>
+    
+            <!--GENDER RADIOBUTTONS-->
+            <label>Please select your gender:</label><br>
+            <input type="radio" id="male" name="genders" value="Male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="genders" value="Female">
+            <label for="female">Female</label><br>
+    
+            <br>
+            <!--DROPDOWN OPTIONS-->
+            <label>Choose workout regime</label><br>
+            <select name="Activities Selection" id="activitySelect">
+                <option value="">--Please choose an option--</option>
+                <option value="sedentary">Sedentary</option>
+                <option value="lightly-active">Lightly Active</option>
+                <option value="moderately-active">Moderately Active</option>
+                <option value="active">Active</option>
+                <option value="very-active">Very Active</option>
+            </select>
+            <br><br>
+    
+            <button onclick="waterCalculator()">Calculate</button>
+    
+            <p id="BMR-output" style="font-weight: bold;"></p>
+        </div>
+    </div>
+
+    <div id="workout" class="tabcontent">
+    </div>
+
+    <div id="notes" class="tabcontent">
+        <input type="note-inputBox">
+    </div>
+</body>
+<script src="./calculating.js"></script>
+<script src="./appFunction.js"></script>
+<script src="./tabs.js"></script>
+<script src="./noteapp.js"></script>
+</html>
